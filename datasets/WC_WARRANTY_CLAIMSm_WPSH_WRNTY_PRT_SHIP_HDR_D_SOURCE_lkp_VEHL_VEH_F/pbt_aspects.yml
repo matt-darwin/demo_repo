@@ -1,0 +1,18 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: VEHL_VIN
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: VEHL_VEH_MKE_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

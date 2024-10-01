@@ -1,0 +1,733 @@
+{
+  "metainfo" : {
+    "id" : "graph",
+    "language" : "python",
+    "fabricId" : "default",
+    "frontEndLanguage" : "python",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ]
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "default" : {
+          "type" : "record",
+          "fields" : [ ]
+        }
+      },
+      "instances" : {
+        "default" : { }
+      },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false,
+      "resolvedConfigs" : {
+        "default" : { }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : true,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_1",
+    "source" : "VI_180_SRCX_EXP",
+    "sourcePort" : "out0",
+    "target" : "VI_180_SRCX",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_2",
+    "source" : "fil_VI_180_Filter_Error",
+    "sourcePort" : "out0",
+    "target" : "VI_180_SRCX_EXP",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_3",
+    "source" : "SQ_VW_One_Eighty_Sent_Dealers",
+    "sourcePort" : "out0",
+    "target" : "exp_VI_180_SRCX",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_4",
+    "source" : "exp_VI_180_SRCX",
+    "sourcePort" : "out0",
+    "target" : "exp_VI_180_SRCX_EXPR_1",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_5",
+    "source" : "exp_VI_180_SRCX_EXPR_1",
+    "sourcePort" : "out0",
+    "target" : "fil_VI_180_Filter_Error",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_6",
+    "source" : "VW_One_Eighty_Sent_Dealers",
+    "sourcePort" : "out0",
+    "target" : "SQ_VW_One_Eighty_Sent_Dealers",
+    "targetPort" : "in0"
+  } ],
+  "processes" : {
+    "exp_VI_180_SRCX_EXPR_1" : {
+      "id" : "exp_VI_180_SRCX_EXPR_1",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "exp_VI_180_SRCX_EXPR_1",
+        "slug" : "exp_VI_180_SRCX_EXPR_1",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "_row_id" : "1524091544",
+          "target" : "ERR_IND",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"`ERR_IND``\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1033201834",
+          "target" : "DELR_ACCT_CDE",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"`o_DELR_ACCT_CDE``\")"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "VW_One_Eighty_Sent_Dealers" : {
+      "id" : "VW_One_Eighty_Sent_Dealers",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "VW_One_Eighty_Sent_Dealers",
+        "slug" : "VW_One_Eighty_Sent_Dealers",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DELR_ACCT_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "format" : "csv",
+        "refreshDataset" : false,
+        "dataFormats" : [ {
+          "label" : "CSV",
+          "value" : "csv",
+          "icon" : "CsvIcon",
+          "type" : "File"
+        }, {
+          "label" : "Parquet",
+          "value" : "parquet",
+          "icon" : "ParquetLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Avro",
+          "value" : "avro",
+          "icon" : "AvroLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Text",
+          "value" : "text",
+          "icon" : "FileTextIcon",
+          "type" : "File"
+        }, {
+          "label" : "Delta",
+          "value" : "delta",
+          "icon" : "DeltaLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "JSON",
+          "value" : "json",
+          "icon" : "JsonIcon",
+          "type" : "File"
+        }, {
+          "label" : "ORC",
+          "value" : "orc",
+          "icon" : "OrcLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Catalog Table",
+          "value" : "catalogTable",
+          "icon" : "CatalogTableIcon",
+          "type" : "Database"
+        }, {
+          "label" : "JDBC",
+          "value" : "jdbc",
+          "icon" : "JdbcFileIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Snowflake",
+          "value" : "snowflake",
+          "icon" : "SnowflakeLogoIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Kafka",
+          "value" : "KafkaStream",
+          "icon" : "KafkaLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "BigQuery",
+          "value" : "bigquery",
+          "icon" : "BigqueryLogoIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Redshift",
+          "value" : "redshift",
+          "icon" : "RedshiftNewIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Salesforce",
+          "value" : "salesforce",
+          "icon" : "DatabaseASolidIcon",
+          "type" : "WebApp"
+        }, {
+          "label" : "Mongodb",
+          "value" : "mongodb",
+          "icon" : "MongoDbIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Cosmosdb",
+          "value" : "CosmosDB",
+          "icon" : "DatabaseASolidIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Xml",
+          "value" : "xml",
+          "icon" : "XmlIcon",
+          "type" : "File"
+        }, {
+          "label" : "Xlsx",
+          "value" : "xlsx",
+          "icon" : "FileIcon",
+          "type" : "File"
+        }, {
+          "label" : "Fixed Format",
+          "value" : "fixedformat",
+          "icon" : "FixedFormatFileIcon",
+          "type" : "File"
+        }, {
+          "label" : "Iceberg",
+          "value" : "iceberg",
+          "icon" : "TableSolidIcon",
+          "type" : "Database"
+        } ],
+        "datasetId" : "34189/datasets/VW_One_Eighty_Sent_Dealers",
+        "dataTypes" : [ {
+          "label" : "File",
+          "value" : "File",
+          "icon" : "File"
+        }, {
+          "label" : "Warehouse",
+          "value" : "Warehouse",
+          "icon" : "Database"
+        }, {
+          "label" : "Catalog Table",
+          "value" : "Database",
+          "icon" : "CatalogTable"
+        }, {
+          "label" : "Applications",
+          "value" : "WebApp",
+          "icon" : "WebApp"
+        } ],
+        "currentDatasetId" : "34189/datasets/VW_One_Eighty_Sent_Dealers",
+        "dataset" : {
+          "ignoreLeadingWhiteSpaceReading" : null,
+          "multiLine" : null,
+          "path" : "path",
+          "ignoreTrailingWhiteSpaceReading" : null,
+          "maxColumns" : null,
+          "writeMode" : "error",
+          "description" : "",
+          "separator" : "YES",
+          "compression" : null,
+          "nullValue" : null,
+          "nanValue" : null,
+          "escapeQuotes" : null,
+          "charToEscapeQuoteEscaping" : null,
+          "skipFooters" : null,
+          "encoding" : null,
+          "inferSchema" : null,
+          "enforceSchema" : null,
+          "quoteAll" : null,
+          "ignoreLeadingWhiteSpaceWriting" : null,
+          "locale" : null,
+          "quote" : "\"",
+          "timestampFormat" : null,
+          "emptyValue" : null,
+          "recursiveFileLookup" : null,
+          "partitionColumns" : null,
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DELR_ACCT_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "escape" : null,
+          "unescapedQuoteHandling" : null,
+          "positiveInf" : null,
+          "skipHeaders" : null,
+          "comment" : null,
+          "lineSep" : null,
+          "samplingRatio" : null,
+          "dateFormat" : null,
+          "mode" : null,
+          "header" : true,
+          "columnNameOfCorruptRecord" : null,
+          "modifiedBefore" : null,
+          "ignoreTrailingWhiteSpaceWriting" : null,
+          "maxCharsPerColumn" : null,
+          "negativeInf" : null,
+          "createSingleOutputFile" : null,
+          "pathGlobFilter" : null,
+          "useSchema" : true,
+          "modifiedAfter" : null
+        },
+        "isNewDataset" : false,
+        "datasetType" : "File"
+      }
+    },
+    "VI_180_SRCX" : {
+      "id" : "VI_180_SRCX",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "VI_180_SRCX",
+        "slug" : "VI_180_SRCX",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DELR_ACCT_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "format" : "jdbc",
+        "refreshDataset" : false,
+        "dataFormats" : [ {
+          "label" : "CSV",
+          "value" : "csv",
+          "icon" : "CsvIcon",
+          "type" : "File"
+        }, {
+          "label" : "Parquet",
+          "value" : "parquet",
+          "icon" : "ParquetLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Avro",
+          "value" : "avro",
+          "icon" : "AvroLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Text",
+          "value" : "text",
+          "icon" : "FileTextIcon",
+          "type" : "File"
+        }, {
+          "label" : "Delta",
+          "value" : "delta",
+          "icon" : "DeltaLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "JSON",
+          "value" : "json",
+          "icon" : "JsonIcon",
+          "type" : "File"
+        }, {
+          "label" : "ORC",
+          "value" : "orc",
+          "icon" : "OrcLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Fixed Format",
+          "value" : "fixedformat",
+          "icon" : "FixedFormatFileIcon",
+          "type" : "File"
+        }, {
+          "label" : "Catalog Table",
+          "value" : "catalogTable",
+          "icon" : "CatalogTableIcon",
+          "type" : "Database"
+        }, {
+          "label" : "Snowflake",
+          "value" : "snowflake",
+          "icon" : "SnowflakeLogoIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Xml",
+          "value" : "xml",
+          "icon" : "XmlIcon",
+          "type" : "File"
+        }, {
+          "label" : "Kafka",
+          "value" : "KafkaStream",
+          "icon" : "KafkaLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Mongodb",
+          "value" : "mongodb",
+          "icon" : "MongoDbIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Xlsx",
+          "value" : "xlsx",
+          "icon" : "FileIcon",
+          "type" : "File"
+        }, {
+          "label" : "JDBC",
+          "value" : "jdbc",
+          "icon" : "JdbcFileIcon",
+          "type" : "Warehouse"
+        } ],
+        "datasetId" : "34189/datasets/VI_180_SRCX",
+        "dataTypes" : [ {
+          "label" : "File",
+          "value" : "File",
+          "icon" : "File"
+        }, {
+          "label" : "Warehouse",
+          "value" : "Warehouse",
+          "icon" : "Database"
+        }, {
+          "label" : "Catalog Table",
+          "value" : "Database",
+          "icon" : "CatalogTable"
+        }, {
+          "label" : "Applications",
+          "value" : "WebApp",
+          "icon" : "WebApp"
+        } ],
+        "currentDatasetId" : "34189/datasets/VI_180_SRCX",
+        "dataset" : {
+          "textPassword" : "password",
+          "refreshKrb5Config" : null,
+          "keytab" : null,
+          "cascadeTruncate" : null,
+          "secretPassword" : [ {
+            "type" : "literal",
+            "value" : "password"
+          } ],
+          "lowerBound" : null,
+          "writeMode" : "overwrite",
+          "description" : "",
+          "preSQL" : null,
+          "customSchema" : null,
+          "postSQL" : null,
+          "partitionColumn" : null,
+          "pushDownPredicate" : true,
+          "truncate" : null,
+          "batchsize" : null,
+          "query" : null,
+          "sessionInitStatement" : null,
+          "isolationLevel" : null,
+          "readFromSource" : "sqlQuery",
+          "credentialScope" : null,
+          "secretUsername" : [ {
+            "type" : "literal",
+            "value" : "admin"
+          } ],
+          "upperBound" : null,
+          "pushDownAggregate" : null,
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "DELR_ACCT_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "driver" : "na",
+          "createTableColumnTypes" : null,
+          "jdbcUrl" : "jdbcUrl",
+          "fetchsize" : null,
+          "dbtable" : null,
+          "principal" : null,
+          "textUsername" : "admin",
+          "createTableOptions" : null,
+          "secretJdbcUrl" : [ {
+            "type" : "literal",
+            "value" : "jdbcUrl"
+          } ],
+          "queryTimeout" : null,
+          "numPartitions" : null,
+          "credType" : "userPwd"
+        },
+        "isNewDataset" : false,
+        "datasetType" : "Warehouse"
+      }
+    },
+    "SQ_VW_One_Eighty_Sent_Dealers" : {
+      "id" : "SQ_VW_One_Eighty_Sent_Dealers",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SQ_VW_One_Eighty_Sent_Dealers",
+        "slug" : "SQ_VW_One_Eighty_Sent_Dealers",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "_row_id" : "434928304",
+          "target" : "DELR_ACCT_CDE",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"DELR_ACCT_CDE\")"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "fil_VI_180_Filter_Error" : {
+      "id" : "fil_VI_180_Filter_Error",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "fil_VI_180_Filter_Error",
+        "slug" : "fil_VI_180_Filter_Error",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "python",
+          "expression" : "col(\"ERR_IND\") == lit(\"N\")"
+        }
+      }
+    },
+    "exp_VI_180_SRCX" : {
+      "id" : "exp_VI_180_SRCX",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "exp_VI_180_SRCX",
+        "slug" : "exp_VI_180_SRCX",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "_row_id" : "514332502",
+          "target" : "DELR_ACCT_CDE",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"DELR_ACCT_CDE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1146318773",
+          "target" : "o_DELR_ACCT_CDE",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "ltrim(rtrim(col(\"DELR_ACCT_CDE\")))"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "323761234",
+          "target" : "ERR_IND",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "when((isnull(col(\"DELR_ACCT_CDE\")) | array_contains(array(lit(\"?\"), lit(\"/\"), lit(\"0\")), col(\"DELR_ACCT_CDE\")).cast(BooleanType())) | col(\"DELR_ACCT_CDE\").rlike(\"\\\"^\\s$\\\"\"), lit(\"Y\")).otherwise(lit(\"N\"))"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "VI_180_SRCX_EXP" : {
+      "id" : "VI_180_SRCX_EXP",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "VI_180_SRCX_EXP",
+        "slug" : "VI_180_SRCX_EXP",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "_row_id" : "1074984047",
+          "target" : "DELR_ACCT_CDE",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"DELR_ACCT_CDE\")"
+          },
+          "description" : ""
+        } ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}

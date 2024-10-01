@@ -1,0 +1,25 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: FTP_Command
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: DUMMY1
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: FileName
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

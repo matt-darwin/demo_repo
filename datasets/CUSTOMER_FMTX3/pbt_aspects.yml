@@ -1,0 +1,781 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: EMAIL_ID5_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CO_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: RTRN_MAIL_IND
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: BUSN_PHN_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ADDR_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: NAME_SUF_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_CITY_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: LAST_EXTRC_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_LAST_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: BUSN_FAX_NUM
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ZIP_SUF_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CNTY_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: FRST_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID3_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID4_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID3
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID4_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ADDR_ID
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_POST_ZIP_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_STRE_LINE_2_TXT
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: BRTH_DTE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_FILE_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: PERS_TITL_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: PERS_CELL_NUM
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: PERS_NAME_CHG_IND
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: POST_ZIP_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SUPPR_RSN_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_GNDR_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: DLVRY_SCRE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: HOME_FAX_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: DSF_FOOTNOTES
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID2
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: DSF2_VERIFIED
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: BUSN_CELL_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_MARTL_ST_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: STRE_LINE_2_TXT
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SUF_CHG_TYP_IND
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: UPD_BY_USER
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_FRST_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: LAST_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: BUSN_FAX_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_ADDR_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_PERS_TITL_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: BUSN_FAX_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_PROV_ST_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_NAME_SUF_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CARR_RTE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ETL_WFLOW_RUN_ID
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_MID_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: NCOA_LINK_RTRN_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ADDR_SRC_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID2_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID2_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: PERS_CELL_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ADDR_STD_OVRD_IND
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: REC_HASH_SIGN
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: BUSN_CELL_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: DLVRY_PT_BARCDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: NAME_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: MARTL_ST_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: HOME_PHN_NUM
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ADDR_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: BUSN_PHN_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID5_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_FLAG
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: HOME_PHN_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_SYSTM_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: PRIV_PREF_FLAG
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: HOME_FAX_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_PREFRD_LNG_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CITY_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SENT_TO_EXPERN
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID3_UPD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ETL_REQ_NUM
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID5
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: PERS_ORG_CHG_IND
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_CO_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: HOME_PHN_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CUST_IDENT
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_ZIP_SUF_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: STRE_LINE_1_TXT
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: PREFRD_LNG_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: BYPS_VALDN_IND
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: PROV_ST_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: DECEASED_FLAG
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: DLVRY_IND
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_STRE_LINE_1_TXT
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ADD_BY_USER
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: PARTY_TYP_CHG_IND
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: MID_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: HOME_FAX_NUM
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: EMAIL_ID4
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_CUST_REC_TYP_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: GNDR_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ADDR_HASH_SIGN
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: FINALIST_DWLG_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: SRC_CNTY_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ADDR_TYP_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: NAME_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: NCOA_MOVE_DATE
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: BUSN_PHN_NUM
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CONT_ID
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: CUST_REC_TYP_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: PERS_CELL_ADD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: TRUVUE_ID
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: BUSN_CELL_NUM
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

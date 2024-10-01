@@ -1,0 +1,144 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: WPSI_LAST_STCKNG_DTE_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_LAST_WRNTY_STS_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_FRST_STCKNG_DTE_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_LAST_STCKNG_BIN
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_LAST_WRNTY_STS_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_FRST_STCKNG_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_LAST_PRT_RCVD_STS_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_FRST_WRNTY_STS_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_FRST_PRT_RCVD_STS_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_FRST_STCKNG_BIN
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_LAST_STCKNG_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_BKNG_DEPT_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_ORD_PROF_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_LAST_PRT_RCVD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_FRST_PRT_SHP_DTE
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_PRT_LNE_NUM
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_FRST_WRNTY_STS_DTE_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_FRST_PRT_RCVD_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_LAST_WRNTY_STS_DTE_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSI_FRST_WRNTY_STS_DTTM
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

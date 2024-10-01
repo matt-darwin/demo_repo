@@ -1,0 +1,18 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: WPSH_ORD_PROF_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_SHPMNT_IDENT
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

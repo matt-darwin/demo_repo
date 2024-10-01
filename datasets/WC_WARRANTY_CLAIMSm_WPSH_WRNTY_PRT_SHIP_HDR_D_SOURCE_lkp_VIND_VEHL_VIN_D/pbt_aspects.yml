@@ -1,0 +1,18 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: VIND_VEHL_VIN_KEY
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: VIND_VIN
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

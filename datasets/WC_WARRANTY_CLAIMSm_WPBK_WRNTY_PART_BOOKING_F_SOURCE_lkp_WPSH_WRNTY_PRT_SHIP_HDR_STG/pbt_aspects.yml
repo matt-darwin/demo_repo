@@ -1,0 +1,88 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: WPSH_MAN_CLAIM_FLG
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_SAGA_CLAIM_FLG
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_SHPMNT_IDENT
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_PART_QTY
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_NEW_PRT_NUM
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_SAGA_MAN_CLAIM_FLG
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_CURR_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_PART_RCPNT_CDE
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_NEW_PRT_NUM_DESC
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_PART_USD_COST
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_SAGA_SHPMNT_IDENT
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: WPSH_PRT_LINE_NUM
+    type: double
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

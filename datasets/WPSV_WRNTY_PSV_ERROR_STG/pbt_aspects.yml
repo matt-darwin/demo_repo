@@ -1,0 +1,88 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: ELG_SEG06_DTTM
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ELG_RUN_DT
+    type: timestamp
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ELG_SEG02_DESC
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ELG_SEG05_USER
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ELG_CMNTS_DESC
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ELG_REC_SET
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ELG_SEG04_DESC
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ELG_SRC_FILE_NME
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ELG_SEG01_DESC
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ELG_ERR_DESC
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ELG_LOAD_MAPPNG
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: ELG_SEG03_DESC
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []

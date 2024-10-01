@@ -1,0 +1,710 @@
+name: vw_transpiler_demo_2
+description: ''
+version: 0.0.1
+author: matthew@prophecy.io
+language: python
+buildSystem: ''
+buildSystemDetails:
+  artefactID: vwtranspilerdemo2
+  parentArtefactID: matthewprophecyioteam
+  buildSystem: wheel
+  author: null
+  createdAt: '2024-10-01 14:48:24'
+pipelines:
+  pipelines/Customer_MDM:
+    name: Customer_MDM
+    description: null
+    author: matthew@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-10-01 14:53:36'
+    datasets:
+      inputs:
+      - datasets/MDM_CUSm_MDM_TCHPT_XML_MDM_sc_CPCR_TOUCH_POINT_MDMX
+      outputs:
+      - datasets/MDM_sc_VNA_MAINTAIN_TOUCH_POINT_MDM_XML
+    subgraphs: []
+    dependencies: {}
+  pipelines/MDM_CUS_m_MDM_CUST_2_CONSLINK_FILE_CREATE_FMTX3:
+    name: MDM_CUS_m_MDM_CUST_2_CONSLINK_FILE_CREATE_FMTX3
+    description: null
+    author: matthew@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-10-01 14:53:36'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/WC_WARRANTY_CLAIMS_m_WPSH_WRNTY_PRT_SHIP_HDR_D:
+    name: WC_WARRANTY_CLAIMS_m_WPSH_WRNTY_PRT_SHIP_HDR_D
+    description: null
+    author: matthew@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-10-01 14:53:37'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/COMMON_OBJECTS_m_VENDOR_SUCC_NOTIF_EMAIL:
+    name: COMMON_OBJECTS_m_VENDOR_SUCC_NOTIF_EMAIL
+    description: null
+    author: matthew@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-10-01 14:53:37'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/WC_WARRANTY_CLAIMS_m_WPBK_WRNTY_PART_BOOKING_F:
+    name: WC_WARRANTY_CLAIMS_m_WPBK_WRNTY_PART_BOOKING_F
+    description: null
+    author: matthew@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-10-01 14:53:38'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/Vehicle_inventory:
+    name: Vehicle_inventory
+    description: null
+    author: matthew@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-10-01 14:53:39'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+datasets:
+  datasets/MDM_CUSm_MDM_TCHPT_XML_MDM_sc_CPCR_TOUCH_POINT_MDMX:
+    name: MDM_CUSm_MDM_TCHPT_XML_MDM_sc_CPCR_TOUCH_POINT_MDMX
+    description: 'Dataset for componentName: MDM_CUSm_MDM_TCHPT_XML_MDM_sc_CPCR_TOUCH_POINT_MDMX'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:32'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:32'
+  datasets/MDM_sc_VNA_MAINTAIN_TOUCH_POINT_MDM_XML:
+    name: MDM_sc_VNA_MAINTAIN_TOUCH_POINT_MDM_XML
+    description: 'Dataset for componentName: MDM_sc_VNA_MAINTAIN_TOUCH_POINT_MDM_XML'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:32'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: File
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:32'
+  datasets/EXPERIAN_CDI_EXTRACT:
+    name: EXPERIAN_CDI_EXTRACT
+    description: 'Dataset for componentName: EXPERIAN_CDI_EXTRACT'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:32'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: File
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:32'
+  datasets/CUSTOMER_FMTX3:
+    name: CUSTOMER_FMTX3
+    description: 'Dataset for componentName: CUSTOMER_FMTX3'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:33'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:33'
+  datasets/MDM_CUSm_MDM_CUST_2_CONSLINK_FILE_CREATE_FMTX3_CUSTOMER_FMTX2:
+    name: MDM_CUSm_MDM_CUST_2_CONSLINK_FILE_CREATE_FMTX3_CUSTOMER_FMTX2
+    description: 'Dataset for componentName: MDM_CUSm_MDM_CUST_2_CONSLINK_FILE_CREATE_FMTX3_CUSTOMER_FMTX2'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:33'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:33'
+  datasets/Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D_Ins:
+    name: Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D_Ins
+    description: 'Dataset for componentName: Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D_Ins'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:33'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:33'
+  datasets/WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_lkp_VEHL_VEH_F:
+    name: WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_lkp_VEHL_VEH_F
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_lkp_VEHL_VEH_F'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:33'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:33'
+  datasets/Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D_Upd:
+    name: Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D_Upd
+    description: 'Dataset for componentName: Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D_Upd'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:33'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:33'
+  datasets/Shortcut_to_WPSH_WRNTY_X_CLAIM_PRT_SHIP_HDR_D:
+    name: Shortcut_to_WPSH_WRNTY_X_CLAIM_PRT_SHIP_HDR_D
+    description: 'Dataset for componentName: Shortcut_to_WPSH_WRNTY_X_CLAIM_PRT_SHIP_HDR_D'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:33'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:33'
+  datasets/WPSV_WRNTY_PSV_ERROR_STG_2:
+    name: WPSV_WRNTY_PSV_ERROR_STG_2
+    description: 'Dataset for componentName: WPSV_WRNTY_PSV_ERROR_STG'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:33'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:33'
+  datasets/WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_Lkp_Wrnty_Prt_Ship_Hdr_D:
+    name: WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_Lkp_Wrnty_Prt_Ship_Hdr_D
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_Lkp_Wrnty_Prt_Ship_Hdr_D'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:33'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:33'
+  datasets/WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_lkp_DLRA_DELR_ACCT_D:
+    name: WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_lkp_DLRA_DELR_ACCT_D
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_lkp_DLRA_DELR_ACCT_D'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:33'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:33'
+  datasets/WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_lkp_VIND_VEHL_VIN_D:
+    name: WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_lkp_VIND_VEHL_VIN_D
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_SOURCE_lkp_VIND_VEHL_VIN_D'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:33'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:33'
+  datasets/WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_WPSH_WRNTY_PRT_SHIP_HDR_STG:
+    name: WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_WPSH_WRNTY_PRT_SHIP_HDR_STG
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPSH_WRNTY_PRT_SHIP_HDR_D_WPSH_WRNTY_PRT_SHIP_HDR_STG'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:33'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:33'
+  datasets/COMMON_OBJECTSm_VENDOR_SUCC_NOTIF_EMAIL_Shortcut_to_IDF_INTERFACE_DEFINITION1:
+    name: COMMON_OBJECTSm_VENDOR_SUCC_NOTIF_EMAIL_Shortcut_to_IDF_INTERFACE_DEFINITION1
+    description: 'Dataset for componentName: COMMON_OBJECTSm_VENDOR_SUCC_NOTIF_EMAIL_Shortcut_to_IDF_INTERFACE_DEFINITION1'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/FF_DUMMY_FTP:
+    name: FF_DUMMY_FTP
+    description: 'Dataset for componentName: FF_DUMMY_FTP'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: File
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WPSI_WRNTY_PART_SHIP_ITEMS_F:
+    name: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WPSI_WRNTY_PART_SHIP_ITEMS_F
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WPSI_WRNTY_PART_SHIP_ITEMS_F'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_Lkp_WPRS_PRT_RTRN_STS:
+    name: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_Lkp_WPRS_PRT_RTRN_STS
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_Lkp_WPRS_PRT_RTRN_STS'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WPSH_WRNTY_PRT_SHIP_HDR_D:
+    name: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WPSH_WRNTY_PRT_SHIP_HDR_D
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WPSH_WRNTY_PRT_SHIP_HDR_D'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/Shortcut_to_WPBK_WRNTY_PART_BOOKING_F_Del:
+    name: Shortcut_to_WPBK_WRNTY_PART_BOOKING_F_Del
+    description: 'Dataset for componentName: Shortcut_to_WPBK_WRNTY_PART_BOOKING_F_Del'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/Shortcut_to_WPBK_WRNTY_PART_BOOKING_F:
+    name: Shortcut_to_WPBK_WRNTY_PART_BOOKING_F
+    description: 'Dataset for componentName: Shortcut_to_WPBK_WRNTY_PART_BOOKING_F'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/Shortcut_to_WPSI_WRNTY_PART_RCV_SHIP_ITEMS_F:
+    name: Shortcut_to_WPSI_WRNTY_PART_RCV_SHIP_ITEMS_F
+    description: 'Dataset for componentName: Shortcut_to_WPSI_WRNTY_PART_RCV_SHIP_ITEMS_F'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/Shortcut_to_WPSI_WRNTY_PART_SHIP_ITEMS_F_Del:
+    name: Shortcut_to_WPSI_WRNTY_PART_SHIP_ITEMS_F_Del
+    description: 'Dataset for componentName: Shortcut_to_WPSI_WRNTY_PART_SHIP_ITEMS_F_Del'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WBDS_BOOKING_DESC_D:
+    name: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WBDS_BOOKING_DESC_D
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WBDS_BOOKING_DESC_D'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_Wpbk_Bkng_Fact:
+    name: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_Wpbk_Bkng_Fact
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_Wpbk_Bkng_Fact'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D:
+    name: Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D
+    description: 'Dataset for componentName: Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:34'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:34'
+  datasets/WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_lkp_WPSI_WRNTY_PART_SHIP_ITEMS_F_Prev_Recv_Sts:
+    name: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_lkp_WPSI_WRNTY_PART_SHIP_ITEMS_F_Prev_Recv_Sts
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_lkp_WPSI_WRNTY_PART_SHIP_ITEMS_F_Prev_Recv_Sts'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:35'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:35'
+  datasets/Shortcut_to_WPSI_WRNTY_PART_SHIP_ITEMS_F:
+    name: Shortcut_to_WPSI_WRNTY_PART_SHIP_ITEMS_F
+    description: 'Dataset for componentName: Shortcut_to_WPSI_WRNTY_PART_SHIP_ITEMS_F'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:35'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:35'
+  datasets/WPSV_WRNTY_PSV_ERROR_STG:
+    name: WPSV_WRNTY_PSV_ERROR_STG
+    description: 'Dataset for componentName: WPSV_WRNTY_PSV_ERROR_STG'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:35'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:35'
+  datasets/Shortcut_to_WPSI_WRNTY_FRST_PART_RECV_SHIP_ITEMS_F:
+    name: Shortcut_to_WPSI_WRNTY_FRST_PART_RECV_SHIP_ITEMS_F
+    description: 'Dataset for componentName: Shortcut_to_WPSI_WRNTY_FRST_PART_RECV_SHIP_ITEMS_F'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:35'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:35'
+  datasets/WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_DTES_DTE_D:
+    name: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_DTES_DTE_D
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_DTES_DTE_D'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:35'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:35'
+  datasets/Shortcut_to_WPSI_First_WRNTY_PART_SHIP_ITEMS_F:
+    name: Shortcut_to_WPSI_First_WRNTY_PART_SHIP_ITEMS_F
+    description: 'Dataset for componentName: Shortcut_to_WPSI_First_WRNTY_PART_SHIP_ITEMS_F'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:35'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:35'
+  datasets/Shortcut_to_WPSI_WRNTY_PART_SHIP_DTE_F:
+    name: Shortcut_to_WPSI_WRNTY_PART_SHIP_DTE_F
+    description: 'Dataset for componentName: Shortcut_to_WPSI_WRNTY_PART_SHIP_DTE_F'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:35'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:35'
+  datasets/WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_WPBK_PART_BKNG_FACT_STG:
+    name: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_WPBK_PART_BKNG_FACT_STG
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_WPBK_PART_BKNG_FACT_STG'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:35'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:35'
+  datasets/WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WRNTY_BOOKING_DEPT_D:
+    name: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WRNTY_BOOKING_DEPT_D
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WRNTY_BOOKING_DEPT_D'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:35'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:35'
+  datasets/Shortcut_to_WPSI_LST_WRNTY_STS_PART_SHIP_ITEMS_F:
+    name: Shortcut_to_WPSI_LST_WRNTY_STS_PART_SHIP_ITEMS_F
+    description: 'Dataset for componentName: Shortcut_to_WPSI_LST_WRNTY_STS_PART_SHIP_ITEMS_F'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:35'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:35'
+  datasets/WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_Frst_Lst_PRT_RTRN_STS_D:
+    name: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_Frst_Lst_PRT_RTRN_STS_D
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_Frst_Lst_PRT_RTRN_STS_D'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:35'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:35'
+  datasets/Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D1:
+    name: Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D1
+    description: 'Dataset for componentName: Shortcut_to_WPSH_WRNTY_PRT_SHIP_HDR_D1'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:36'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:36'
+  datasets/Shortcut_to_WPSI_WRNTY_PART_STK_SHIP_ITEMS_F:
+    name: Shortcut_to_WPSI_WRNTY_PART_STK_SHIP_ITEMS_F
+    description: 'Dataset for componentName: Shortcut_to_WPSI_WRNTY_PART_STK_SHIP_ITEMS_F'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:36'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:36'
+  datasets/WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WPSH_WRNTY_PRT_SHIP_HDR_STG:
+    name: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WPSH_WRNTY_PRT_SHIP_HDR_STG
+    description: 'Dataset for componentName: WC_WARRANTY_CLAIMSm_WPBK_WRNTY_PART_BOOKING_F_SOURCE_lkp_WPSH_WRNTY_PRT_SHIP_HDR_STG'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:36'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:36'
+  datasets/Shortcut_to_WPSI_WRNTY_PART_CURRSTK_SHIP_ITEMS_F:
+    name: Shortcut_to_WPSI_WRNTY_PART_CURRSTK_SHIP_ITEMS_F
+    description: 'Dataset for componentName: Shortcut_to_WPSI_WRNTY_PART_CURRSTK_SHIP_ITEMS_F'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:36'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:36'
+  datasets/VW_One_Eighty_Sent_Dealers:
+    name: VW_One_Eighty_Sent_Dealers
+    description: 'Dataset for componentName: VW_One_Eighty_Sent_Dealers'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:36'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: File
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:36'
+  datasets/VI_180_SRCX:
+    name: VI_180_SRCX
+    description: 'Dataset for componentName: VI_180_SRCX'
+    author: matthew@prophecy.io
+    createdAt: '2024-10-01 14:53:36'
+    mode: batch
+    physicalDatasets:
+      md-databricks-demo:
+        fabricId: 4134
+        datasetType: Warehouse
+        description: ''
+        author: matthew@prophecy.io
+        createdAt: '2024-10-01 14:53:36'
+templates: {}
+jobs: {}
+gemContainer:
+  languageVersion: '3.10'
+  gemLibsVersion: 1.3.4.0
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2024-10-01 14:48:24'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels: {}
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros: {}
+sqlSeeds: {}
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline: null
+dependencies:
+- modifiedAt: '2024-10-01T14:48:24.037069Z'
+  name: plibMaven
+  version: 8.2.1
+  id: '823581820'
+  createdAt: '2024-10-01T14:48:24.037069Z'
+  type: plibMaven
+- modifiedAt: '2024-10-01T14:48:24.037069Z'
+  name: plibPypi
+  version: 1.9.16
+  id: '1554408528'
+  createdAt: '2024-10-01T14:48:24.037069Z'
+  type: plibPypi
+projectDependencies:
+  '12655':
+    projectUID: 12655
+    projectName: ProphecyWarehousePython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12655.git&subPath=
+    version: 0.0.8
+    isDefault: true
+    author: null
+    createdAt: '2024-10-01 14:42:59'
+  '12654':
+    projectUID: 12654
+    projectName: ProphecySparkBasicsPython
+    repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
+    version: 0.2.30
+    isDefault: true
+    author: null
+    createdAt: '2024-10-01 14:42:59'
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}
