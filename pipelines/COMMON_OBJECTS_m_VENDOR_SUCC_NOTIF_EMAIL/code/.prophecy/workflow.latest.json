@@ -1,0 +1,2590 @@
+{
+  "metainfo" : {
+    "id" : "graph",
+    "language" : "python",
+    "fabricId" : "default",
+    "frontEndLanguage" : "python",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ {
+        "name" : "error",
+        "code" : "\n@udf(NullType())\ndef error(in0):\n return None\n",
+        "language" : "python"
+      } ]
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "EXEC",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "MAIL_SUBJ",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "MAIL_MSG",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "FULL_FILE_NAME",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JOB_PARFILE",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "RCVR_ACCT_CDE",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "DOC_DEF_ID",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "ENV_NAME",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JOB_APP_REPO",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "JOB_APP_AREA",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "EXTRACT_CMD_FILE_NAME",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "WF_MBX",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "OPR_MDM_TGT",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "EXTRACT_FILE_BASE_NAME",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "FILE_EXT_NAME",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "AUDIT_SCHEMA",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "SEND_NOTF_IND",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "SNDR_ACCT_CDE",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "PMWorkflowName",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        }, {
+          "name" : "PMWorkflowRunId",
+          "kind" : {
+            "type" : "string",
+            "value" : ""
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : {
+        "default" : {
+          "type" : "record",
+          "fields" : [ {
+            "name" : "EXEC",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "RCVR_ACCT_CDE",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "JOB_APP_AREA",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "JOB_APP_REPO",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "EXTRACT_FILE_BASE_NAME",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "AUDIT_SCHEMA",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "FULL_FILE_NAME",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "OPR_MDM_TGT",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "SNDR_ACCT_CDE",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "PMWorkflowName",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "MAIL_MSG",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "JOB_PARFILE",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "PMWorkflowRunId",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "FILE_EXT_NAME",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "ENV_NAME",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "EXTRACT_CMD_FILE_NAME",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "SEND_NOTF_IND",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "WF_MBX",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "MAIL_SUBJ",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "DOC_DEF_ID",
+            "kind" : {
+              "type" : "string",
+              "value" : ""
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          } ]
+        }
+      },
+      "instances" : {
+        "default" : {
+          "EXEC" : "",
+          "RCVR_ACCT_CDE" : "",
+          "JOB_APP_AREA" : "",
+          "JOB_APP_REPO" : "",
+          "EXTRACT_FILE_BASE_NAME" : "",
+          "AUDIT_SCHEMA" : "",
+          "FULL_FILE_NAME" : "",
+          "OPR_MDM_TGT" : "",
+          "SNDR_ACCT_CDE" : "",
+          "PMWorkflowName" : "",
+          "MAIL_MSG" : "",
+          "JOB_PARFILE" : "",
+          "PMWorkflowRunId" : "",
+          "FILE_EXT_NAME" : "",
+          "ENV_NAME" : "",
+          "EXTRACT_CMD_FILE_NAME" : "",
+          "SEND_NOTF_IND" : "",
+          "WF_MBX" : "",
+          "MAIL_SUBJ" : "",
+          "DOC_DEF_ID" : ""
+        }
+      },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false,
+      "resolvedConfigs" : {
+        "default" : { }
+      }
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ ],
+    "isImported" : true,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    }
+  },
+  "connections" : [ {
+    "id" : "edge_7",
+    "source" : "FF_DUMMY_FTP_EXP",
+    "sourcePort" : "out0",
+    "target" : "FF_DUMMY_FTP",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_8",
+    "source" : "COMMON_OBJECTSm_VENDOR_SUCC_NOTIF_EMAIL_Shortcut_to_IDF_INTERFACE_DEFINITION1",
+    "sourcePort" : "out0",
+    "target" : "SQ_IDF",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_9",
+    "source" : "fil_EMAILS",
+    "sourcePort" : "out0",
+    "target" : "EXP_DERIVE_EMAIL_CMD",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_10",
+    "source" : "EXP_DERIVE_EMAIL_CMD",
+    "sourcePort" : "out0",
+    "target" : "EXP_DERIVE_EMAIL_CMD_EXPR_1",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_11",
+    "source" : "EXP_DERIVE_EMAIL_CMD_EXPR_1",
+    "sourcePort" : "out0",
+    "target" : "FF_DUMMY_FTP_EXP",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_12",
+    "source" : "EXP_VALIDATE_EMAIL",
+    "sourcePort" : "out0",
+    "target" : "fil_EMAILS",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_13",
+    "source" : "SQ_IDF",
+    "sourcePort" : "out0",
+    "target" : "EXP_VALIDATE_EMAIL_VARS",
+    "targetPort" : "in0"
+  }, {
+    "id" : "edge_14",
+    "source" : "EXP_VALIDATE_EMAIL_VARS",
+    "sourcePort" : "out0",
+    "target" : "EXP_VALIDATE_EMAIL",
+    "targetPort" : "in0"
+  } ],
+  "processes" : {
+    "FF_DUMMY_FTP_EXP" : {
+      "id" : "FF_DUMMY_FTP_EXP",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "FF_DUMMY_FTP_EXP",
+        "slug" : "FF_DUMMY_FTP_EXP",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "_row_id" : "1525889562",
+          "target" : "FTP_Command",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"FTP_Command\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1436590674",
+          "target" : "DUMMY1",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "lit(None)"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "619977054",
+          "target" : "FileName",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"FileName\")"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "COMMON_OBJECTSm_VENDOR_SUCC_NOTIF_EMAIL_Shortcut_to_IDF_INTERFACE_DEFINITION1" : {
+      "id" : "COMMON_OBJECTSm_VENDOR_SUCC_NOTIF_EMAIL_Shortcut_to_IDF_INTERFACE_DEFINITION1",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "COMMON_OBJECTSm_VENDOR_SUCC_NOTIF_EMAIL_Shortcut_to_IDF_INTERFACE_DEFINITION1",
+        "slug" : "COMMON_OBJECTSm_VENDOR_SUCC_NOTIF_EMAIL_Shortcut_to_IDF_INTERFACE_DEFINITION1",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RCVR_LAST_NOTF_DTTM",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "VNDR_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_ACCT_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ACKN_RECPT_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_TRNSPT_TYP_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MISSED_NOTF_EMAIL_LIST",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SENDER_CNTL_JOB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_NOTF_PRD",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "UPD_DTTM",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DECRYPT_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SCHED_FREQ_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PSA_REGSTR_FROM_DTE",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PSA_REGSTR_THRU_DTE",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_LAST_SUCS_RUN_DTTM",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SENDER_TRNSPT_TYP_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "FILE_WTCHR_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SENDER_RPSTRY_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_RPSTRY_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "UPD_BY_USER",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "COL_HDR_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SEND_NOTF_EMAIL_LIST",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SENDER_WFLOW_ID",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CURR_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "FILE_EXT_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ADD_DTTM",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_SENDER_DIR_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MISSED_TRANSF_CNT",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_SCHED_THRSHLD_PRD",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_WFLOW_ID",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "WTCHR_CNTL_JOB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ENCRYPT_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TRLR_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "HDR_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "STRT_DTE",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "FILE_TYP_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_RCVR_TRACE_ID",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_RCVR_FILE_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_SENDER_TRACE_ID",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "END_DTE",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SCHED_DESC",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_CNTL_JOB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ACKN_RECPT_EMAIL_LIST",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ADD_BY_USER",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_SENDER_FILE_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_RCVR_DIR_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MISSED_NOTF_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SEND_NOTF_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DTE_TMESTMP_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DOC_DEF_ID",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SENDER_ACCT_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BASE_FILE_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "format" : "jdbc",
+        "refreshDataset" : false,
+        "dataFormats" : [ {
+          "label" : "CSV",
+          "value" : "csv",
+          "icon" : "CsvIcon",
+          "type" : "File"
+        }, {
+          "label" : "Parquet",
+          "value" : "parquet",
+          "icon" : "ParquetLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Avro",
+          "value" : "avro",
+          "icon" : "AvroLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Text",
+          "value" : "text",
+          "icon" : "FileTextIcon",
+          "type" : "File"
+        }, {
+          "label" : "Delta",
+          "value" : "delta",
+          "icon" : "DeltaLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "JSON",
+          "value" : "json",
+          "icon" : "JsonIcon",
+          "type" : "File"
+        }, {
+          "label" : "ORC",
+          "value" : "orc",
+          "icon" : "OrcLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Fixed Format",
+          "value" : "fixedformat",
+          "icon" : "FixedFormatFileIcon",
+          "type" : "File"
+        }, {
+          "label" : "Catalog Table",
+          "value" : "catalogTable",
+          "icon" : "CatalogTableIcon",
+          "type" : "Database"
+        }, {
+          "label" : "Snowflake",
+          "value" : "snowflake",
+          "icon" : "SnowflakeLogoIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Xml",
+          "value" : "xml",
+          "icon" : "XmlIcon",
+          "type" : "File"
+        }, {
+          "label" : "Kafka",
+          "value" : "KafkaStream",
+          "icon" : "KafkaLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Mongodb",
+          "value" : "mongodb",
+          "icon" : "MongoDbIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Xlsx",
+          "value" : "xlsx",
+          "icon" : "FileIcon",
+          "type" : "File"
+        }, {
+          "label" : "JDBC",
+          "value" : "jdbc",
+          "icon" : "JdbcFileIcon",
+          "type" : "Warehouse"
+        } ],
+        "datasetId" : "34189/datasets/COMMON_OBJECTSm_VENDOR_SUCC_NOTIF_EMAIL_Shortcut_to_IDF_INTERFACE_DEFINITION1",
+        "dataTypes" : [ {
+          "label" : "File",
+          "value" : "File",
+          "icon" : "File"
+        }, {
+          "label" : "Warehouse",
+          "value" : "Warehouse",
+          "icon" : "Database"
+        }, {
+          "label" : "Catalog Table",
+          "value" : "Database",
+          "icon" : "CatalogTable"
+        }, {
+          "label" : "Applications",
+          "value" : "WebApp",
+          "icon" : "WebApp"
+        } ],
+        "currentDatasetId" : "34189/datasets/COMMON_OBJECTSm_VENDOR_SUCC_NOTIF_EMAIL_Shortcut_to_IDF_INTERFACE_DEFINITION1",
+        "dataset" : {
+          "textPassword" : "password",
+          "refreshKrb5Config" : null,
+          "keytab" : null,
+          "cascadeTruncate" : null,
+          "secretPassword" : [ {
+            "type" : "literal",
+            "value" : "password"
+          } ],
+          "lowerBound" : null,
+          "writeMode" : null,
+          "description" : "",
+          "preSQL" : null,
+          "customSchema" : null,
+          "postSQL" : null,
+          "partitionColumn" : null,
+          "pushDownPredicate" : true,
+          "truncate" : null,
+          "batchsize" : null,
+          "query" : null,
+          "sessionInitStatement" : null,
+          "isolationLevel" : null,
+          "readFromSource" : "sqlQuery",
+          "credentialScope" : null,
+          "secretUsername" : [ {
+            "type" : "literal",
+            "value" : "admin"
+          } ],
+          "upperBound" : null,
+          "pushDownAggregate" : null,
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "RCVR_LAST_NOTF_DTTM",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "VNDR_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_ACCT_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ACKN_RECPT_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_TRNSPT_TYP_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MISSED_NOTF_EMAIL_LIST",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SENDER_CNTL_JOB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_NOTF_PRD",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "UPD_DTTM",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DECRYPT_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SCHED_FREQ_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PSA_REGSTR_FROM_DTE",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "PSA_REGSTR_THRU_DTE",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_LAST_SUCS_RUN_DTTM",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SENDER_TRNSPT_TYP_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "FILE_WTCHR_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SENDER_RPSTRY_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_RPSTRY_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "UPD_BY_USER",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "COL_HDR_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SEND_NOTF_EMAIL_LIST",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SENDER_WFLOW_ID",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "CURR_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "FILE_EXT_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ADD_DTTM",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_SENDER_DIR_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MISSED_TRANSF_CNT",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_SCHED_THRSHLD_PRD",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_WFLOW_ID",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "WTCHR_CNTL_JOB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ENCRYPT_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "TRLR_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "HDR_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "STRT_DTE",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "FILE_TYP_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_RCVR_TRACE_ID",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_RCVR_FILE_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_SENDER_TRACE_ID",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "END_DTE",
+              "type" : "timestamp",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SCHED_DESC",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "RCVR_CNTL_JOB_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ACKN_RECPT_EMAIL_LIST",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "ADD_BY_USER",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_SENDER_FILE_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "LAST_RCVR_DIR_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "MISSED_NOTF_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SEND_NOTF_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DTE_TMESTMP_IND",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DOC_DEF_ID",
+              "type" : "double",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "SENDER_ACCT_CDE",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "BASE_FILE_NAME",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "driver" : "notFound",
+          "createTableColumnTypes" : null,
+          "jdbcUrl" : "jdbcUrl",
+          "fetchsize" : null,
+          "dbtable" : null,
+          "principal" : null,
+          "textUsername" : "admin",
+          "createTableOptions" : null,
+          "secretJdbcUrl" : [ {
+            "type" : "literal",
+            "value" : "jdbcUrl"
+          } ],
+          "queryTimeout" : null,
+          "numPartitions" : null,
+          "credType" : "userPwd"
+        },
+        "isNewDataset" : false,
+        "datasetType" : "Warehouse"
+      }
+    },
+    "fil_EMAILS" : {
+      "id" : "fil_EMAILS",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "fil_EMAILS",
+        "slug" : "fil_EMAILS",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "python",
+          "expression" : "when(col(\"o_ACKN_RECPT_EMAIL_LIST\").rlike(\"[\\w.%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6}([,][\\w.%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6})*\"), lit(True)).otherwise(lit(False))"
+        }
+      }
+    },
+    "EXP_VALIDATE_EMAIL" : {
+      "id" : "EXP_VALIDATE_EMAIL",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_VALIDATE_EMAIL",
+        "slug" : "EXP_VALIDATE_EMAIL",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "_row_id" : "707585414",
+          "target" : "BASE_FILE_NAME",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"BASE_FILE_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1929113567",
+          "target" : "o_ACKN_RECPT_EMAIL_LIST",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"v_ACKN_RECPT_EMAIL_LIST\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1779091046",
+          "target" : "o_FILENAME",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "lit(\"DWH_EMAIL_NOTIFICATION_CMD\")"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "EXP_DERIVE_EMAIL_CMD_EXPR_1" : {
+      "id" : "EXP_DERIVE_EMAIL_CMD_EXPR_1",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_DERIVE_EMAIL_CMD_EXPR_1",
+        "slug" : "EXP_DERIVE_EMAIL_CMD_EXPR_1",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "_row_id" : "622719520",
+          "target" : "FTP_Command",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"`o_MAIL_COMMAND``\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "663347374",
+          "target" : "FileName",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"`o_FILE_NAME``\")"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "FF_DUMMY_FTP" : {
+      "id" : "FF_DUMMY_FTP",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "FF_DUMMY_FTP",
+        "slug" : "FF_DUMMY_FTP",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "FTP_Command",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DUMMY1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "FileName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "format" : "csv",
+        "refreshDataset" : false,
+        "dataFormats" : [ {
+          "label" : "CSV",
+          "value" : "csv",
+          "icon" : "CsvIcon",
+          "type" : "File"
+        }, {
+          "label" : "Parquet",
+          "value" : "parquet",
+          "icon" : "ParquetLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Avro",
+          "value" : "avro",
+          "icon" : "AvroLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Text",
+          "value" : "text",
+          "icon" : "FileTextIcon",
+          "type" : "File"
+        }, {
+          "label" : "Delta",
+          "value" : "delta",
+          "icon" : "DeltaLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "JSON",
+          "value" : "json",
+          "icon" : "JsonIcon",
+          "type" : "File"
+        }, {
+          "label" : "ORC",
+          "value" : "orc",
+          "icon" : "OrcLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "Catalog Table",
+          "value" : "catalogTable",
+          "icon" : "CatalogTableIcon",
+          "type" : "Database"
+        }, {
+          "label" : "JDBC",
+          "value" : "jdbc",
+          "icon" : "JdbcFileIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Snowflake",
+          "value" : "snowflake",
+          "icon" : "SnowflakeLogoIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Kafka",
+          "value" : "KafkaStream",
+          "icon" : "KafkaLogoIcon",
+          "type" : "File"
+        }, {
+          "label" : "BigQuery",
+          "value" : "bigquery",
+          "icon" : "BigqueryLogoIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Redshift",
+          "value" : "redshift",
+          "icon" : "RedshiftNewIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Salesforce",
+          "value" : "salesforce",
+          "icon" : "DatabaseASolidIcon",
+          "type" : "WebApp"
+        }, {
+          "label" : "Mongodb",
+          "value" : "mongodb",
+          "icon" : "MongoDbIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Cosmosdb",
+          "value" : "CosmosDB",
+          "icon" : "DatabaseASolidIcon",
+          "type" : "Warehouse"
+        }, {
+          "label" : "Xml",
+          "value" : "xml",
+          "icon" : "XmlIcon",
+          "type" : "File"
+        }, {
+          "label" : "Xlsx",
+          "value" : "xlsx",
+          "icon" : "FileIcon",
+          "type" : "File"
+        }, {
+          "label" : "Fixed Format",
+          "value" : "fixedformat",
+          "icon" : "FixedFormatFileIcon",
+          "type" : "File"
+        }, {
+          "label" : "Iceberg",
+          "value" : "iceberg",
+          "icon" : "TableSolidIcon",
+          "type" : "Database"
+        } ],
+        "datasetId" : "34189/datasets/FF_DUMMY_FTP",
+        "dataTypes" : [ {
+          "label" : "File",
+          "value" : "File",
+          "icon" : "File"
+        }, {
+          "label" : "Warehouse",
+          "value" : "Warehouse",
+          "icon" : "Database"
+        }, {
+          "label" : "Catalog Table",
+          "value" : "Database",
+          "icon" : "CatalogTable"
+        }, {
+          "label" : "Applications",
+          "value" : "WebApp",
+          "icon" : "WebApp"
+        } ],
+        "currentDatasetId" : "34189/datasets/FF_DUMMY_FTP",
+        "dataset" : {
+          "ignoreLeadingWhiteSpaceReading" : null,
+          "multiLine" : null,
+          "path" : "path",
+          "ignoreTrailingWhiteSpaceReading" : null,
+          "maxColumns" : null,
+          "writeMode" : "append",
+          "description" : "",
+          "separator" : "YES",
+          "compression" : null,
+          "nullValue" : null,
+          "nanValue" : null,
+          "escapeQuotes" : null,
+          "charToEscapeQuoteEscaping" : null,
+          "skipFooters" : null,
+          "encoding" : null,
+          "inferSchema" : null,
+          "enforceSchema" : null,
+          "quoteAll" : null,
+          "ignoreLeadingWhiteSpaceWriting" : null,
+          "locale" : null,
+          "quote" : "\"",
+          "timestampFormat" : null,
+          "emptyValue" : null,
+          "recursiveFileLookup" : null,
+          "partitionColumns" : null,
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "FTP_Command",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "DUMMY1",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "FileName",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "escape" : null,
+          "unescapedQuoteHandling" : null,
+          "positiveInf" : null,
+          "skipHeaders" : null,
+          "comment" : null,
+          "lineSep" : null,
+          "samplingRatio" : null,
+          "dateFormat" : null,
+          "mode" : null,
+          "header" : true,
+          "columnNameOfCorruptRecord" : null,
+          "modifiedBefore" : null,
+          "ignoreTrailingWhiteSpaceWriting" : null,
+          "maxCharsPerColumn" : null,
+          "negativeInf" : null,
+          "createSingleOutputFile" : null,
+          "pathGlobFilter" : null,
+          "useSchema" : true,
+          "modifiedAfter" : null
+        },
+        "isNewDataset" : false,
+        "datasetType" : "File"
+      }
+    },
+    "SQ_IDF" : {
+      "id" : "SQ_IDF",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "SQ_IDF",
+        "slug" : "SQ_IDF",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "_row_id" : "208498467",
+          "target" : "SENDER_ACCT_CDE",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"SENDER_ACCT_CDE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1475030628",
+          "target" : "RCVR_ACCT_CDE",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"RCVR_ACCT_CDE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1972595067",
+          "target" : "DOC_DEF_ID",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"DOC_DEF_ID\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1678198310",
+          "target" : "BASE_FILE_NAME",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"BASE_FILE_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "43296068",
+          "target" : "FILE_EXT_NAME",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"FILE_EXT_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "459295943",
+          "target" : "RCVR_CNTL_JOB_NAME",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"RCVR_CNTL_JOB_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1355084650",
+          "target" : "RCVR_RPSTRY_CDE",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"RCVR_RPSTRY_CDE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "2039920639",
+          "target" : "RCVR_WFLOW_ID",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"RCVR_WFLOW_ID\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "979676680",
+          "target" : "SENDER_CNTL_JOB_NAME",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"SENDER_CNTL_JOB_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "657286652",
+          "target" : "SENDER_RPSTRY_CDE",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"SENDER_RPSTRY_CDE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1644647076",
+          "target" : "SENDER_WFLOW_ID",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"SENDER_WFLOW_ID\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1840623933",
+          "target" : "WTCHR_CNTL_JOB_NAME",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"WTCHR_CNTL_JOB_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "506558958",
+          "target" : "SENDER_TRNSPT_TYP_CDE",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"SENDER_TRNSPT_TYP_CDE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "414937125",
+          "target" : "RCVR_TRNSPT_TYP_CDE",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"RCVR_TRNSPT_TYP_CDE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "154517112",
+          "target" : "FILE_TYP_CDE",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"FILE_TYP_CDE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "882991758",
+          "target" : "HDR_IND",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"HDR_IND\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1047931484",
+          "target" : "COL_HDR_IND",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"COL_HDR_IND\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "734310899",
+          "target" : "TRLR_IND",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"TRLR_IND\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1838068690",
+          "target" : "DTE_TMESTMP_IND",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"DTE_TMESTMP_IND\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1953439284",
+          "target" : "SCHED_DESC",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"SCHED_DESC\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1048224096",
+          "target" : "SCHED_FREQ_CDE",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"SCHED_FREQ_CDE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "167136584",
+          "target" : "FILE_WTCHR_IND",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"FILE_WTCHR_IND\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1282635752",
+          "target" : "ACKN_RECPT_IND",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"ACKN_RECPT_IND\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "669296083",
+          "target" : "ACKN_RECPT_EMAIL_LIST",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"ACKN_RECPT_EMAIL_LIST\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "227045266",
+          "target" : "SEND_NOTF_IND",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"SEND_NOTF_IND\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1760250633",
+          "target" : "SEND_NOTF_EMAIL_LIST",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"SEND_NOTF_EMAIL_LIST\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "382827060",
+          "target" : "MISSED_NOTF_IND",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"MISSED_NOTF_IND\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "563404738",
+          "target" : "MISSED_NOTF_EMAIL_LIST",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"MISSED_NOTF_EMAIL_LIST\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "2062711162",
+          "target" : "MISSED_TRANSF_CNT",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"MISSED_TRANSF_CNT\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "486268052",
+          "target" : "LAST_SENDER_DIR_NAME",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"LAST_SENDER_DIR_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1028173649",
+          "target" : "LAST_SENDER_FILE_NAME",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"LAST_SENDER_FILE_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "994181052",
+          "target" : "LAST_SENDER_TRACE_ID",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"LAST_SENDER_TRACE_ID\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "446330643",
+          "target" : "LAST_RCVR_FILE_NAME",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"LAST_RCVR_FILE_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "257914884",
+          "target" : "LAST_RCVR_DIR_NAME",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"LAST_RCVR_DIR_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1685979249",
+          "target" : "LAST_RCVR_TRACE_ID",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"LAST_RCVR_TRACE_ID\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1813589348",
+          "target" : "CURR_IND",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"CURR_IND\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1616521318",
+          "target" : "STRT_DTE",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"STRT_DTE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1543732286",
+          "target" : "END_DTE",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"END_DTE\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1404156360",
+          "target" : "ADD_BY_USER",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"ADD_BY_USER\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1248742035",
+          "target" : "ADD_DTTM",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"ADD_DTTM\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "353434147",
+          "target" : "UPD_BY_USER",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"UPD_BY_USER\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1473594362",
+          "target" : "UPD_DTTM",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"UPD_DTTM\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "457947638",
+          "target" : "RCVR_LAST_SUCS_RUN_DTTM",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"RCVR_LAST_SUCS_RUN_DTTM\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "187896261",
+          "target" : "RCVR_SCHED_THRSHLD_PRD",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"RCVR_SCHED_THRSHLD_PRD\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1772049604",
+          "target" : "RCVR_NOTF_PRD",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"RCVR_NOTF_PRD\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1129446225",
+          "target" : "RCVR_LAST_NOTF_DTTM",
+          "expression" : {
+            "format" : "python",
+            "expression" : "col(\"RCVR_LAST_NOTF_DTTM\")"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "EXP_DERIVE_EMAIL_CMD" : {
+      "id" : "EXP_DERIVE_EMAIL_CMD",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "EXP_DERIVE_EMAIL_CMD",
+        "slug" : "EXP_DERIVE_EMAIL_CMD",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "expressions" : [ {
+          "_row_id" : "1927589122",
+          "target" : "o_ACKN_RECPT_EMAIL_LIST",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"o_ACKN_RECPT_EMAIL_LIST\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1549277818",
+          "target" : "o_FILENAME",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"o_FILENAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "116156590",
+          "target" : "BASE_FILE_NAME",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "col(\"BASE_FILE_NAME\")"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1461378691",
+          "target" : "o_MAIL_COMMAND",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "concat(lit(Config.EXEC), lit(\" \"), lit(Config.PMWorkflowName), lit(\"_\"), lit(Config.PMWorkflowRunId), lit(\" PARFILE==\"), lit(Config.JOB_PARFILE), lit(\" CMD==X_EMAIL SUBJ==\"), lit(Config.MAIL_SUBJ), lit(\"         \"), col(\"BASE_FILE_NAME\"), lit(\" MSG==\"), lit(Config.MAIL_MSG), lit(\" TOLIST==\"), col(\"o_ACKN_RECPT_EMAIL_LIST\"), lit(\" PROD_SUPPORT_EMAIL_FLAG==\"), lit(\"'\"), lit(\"N\"), lit(\"'\"), lit(\" ;\"), lit(\"\\n\"), lit(\"if [ $? -ne 0 ] ;then echo \\\"Email Command Failed for Email ID \\\" \"), col(\"o_ACKN_RECPT_EMAIL_LIST\"), lit(\";exit 1; else echo \\\"Email Command Succeeded for Email ID \\\" \"), col(\"o_ACKN_RECPT_EMAIL_LIST\"), lit(\" ; fi;\"))"
+          },
+          "description" : ""
+        }, {
+          "_row_id" : "1413556416",
+          "target" : "o_FILE_NAME",
+          "expression" : {
+            "format" : "scala",
+            "expression" : "concat(lit(\"mail_cmd_\"), lit(Config.EXTRACT_CMD_FILE_NAME), lit(\".cmd\"))"
+          },
+          "description" : ""
+        } ]
+      }
+    },
+    "EXP_VALIDATE_EMAIL_VARS" : {
+      "id" : "EXP_VALIDATE_EMAIL_VARS",
+      "component" : "SchemaTransform",
+      "metadata" : {
+        "label" : "EXP_VALIDATE_EMAIL_VARS",
+        "slug" : "EXP_VALIDATE_EMAIL_VARS",
+        "x" : 2147483647,
+        "y" : 2147483647,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "in0",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "out0",
+          "slug" : "out0"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "transformations" : [ {
+          "AddRule" : {
+            "expression" : {
+              "format" : "scala",
+              "expression" : ""
+            },
+            "paramErrors" : [ ]
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "kind" : "AddReplaceColumn",
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "v_ACKN_RECPT_EMAIL_LIST",
+            "expression" : {
+              "format" : "scala",
+              "expression" : "regexp_replace(ltrim(regexp_replace(rtrim(regexp_replace(regexp_replace(col(\"ACKN_RECPT_EMAIL_LIST\"), \"(?i)[\", \"\"), \"(?i)[\", \",\")), \"^[,]\", \"\")), \"^[,]\", \"\")"
+            }
+          }
+        }, {
+          "AddRule" : {
+            "expression" : {
+              "format" : "scala",
+              "expression" : ""
+            },
+            "paramErrors" : [ ]
+          },
+          "DropColumn" : {
+            "sourceColumn" : ""
+          },
+          "kind" : "AddReplaceColumn",
+          "RenameColumn" : {
+            "sourceColumn" : "",
+            "targetColumn" : ""
+          },
+          "AddReplaceColumn" : {
+            "sourceColumn" : "v_ACKN_RECPT_EMAIL_CHK_LIST",
+            "expression" : {
+              "format" : "scala",
+              "expression" : "when(~col(\"v_ACKN_RECPT_EMAIL_LIST\").rlike(\"[\\w.%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6}([,][\\w.%+-]+@[\\w.-]+\\.[a-zA-Z]{2,6})*\"), error(concat(lit(\"Invalid Email ID :\"), col(\"ACKN_RECPT_EMAIL_LIST\"), lit(\" Email not sent\")))).otherwise(lit(None))"
+            }
+          }
+        } ]
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
